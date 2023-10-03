@@ -35,7 +35,6 @@ function seleccionarGanador() {
     document.getElementById('winner-name').textContent = ganador;
     winnerDisplay.style.display = 'block';
 
-    // Elimina al ganador de la lista de participantes y lo agrega a la lista de eliminados
     participants = participants.filter((participant, index) => index !== ganadorIndex);
     eliminatedParticipants.push(ganador);
     
@@ -48,5 +47,5 @@ function seleccionarGanador() {
     var audio=document.getElementById('audio');
     audio.play();
  }
- window.addEventListener('load', iniciar, false);
+ window.addEventListener('load', iniciar, true);
 

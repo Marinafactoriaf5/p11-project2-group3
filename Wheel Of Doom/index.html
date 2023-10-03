@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selector Aleatorio de Participantes</title>
+    <title>SAW Wheel of Doom</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -14,9 +14,9 @@
 
     <div class="juego">
 
-        <h1 class="text">Quieres jugar a un juego?</h1>
+        <h1 class="text" id="juego">Quieres jugar a un juego?</h1>
         <label for="participant"></label>
-        <input type="text" id="participant" placeholder="Nombre">
+        <input type="text" id="participant" placeholder="Nombre" class="caja">
         <input type="button" onclick="agregarParticipante()" id="boton" class="boton" value="Agregar">
     </div>
 
@@ -35,10 +35,11 @@
         <h2 class="text"></h2>
         <p id="winner-name"></p>
     </div>
-<footer>
     <audio src="cancion de saw (tema original)_LxZrXaBr9zs.mp3" type="audio/mp3" autoplay></audio>
     <img src="Jigsaw.gif" class="gif">
     <script src="script.js"></script>
+<footer>
+
 </footer>
 </body>
 </html>
