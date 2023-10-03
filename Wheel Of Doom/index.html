@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector Aleatorio de Participantes</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Selector Aleatorio de Participantes</h1>
+    <div>
+        <label for="participant">Nombre del Participante:</label>
+        <input type="text" id="participant" placeholder="Ingrese un nombre">
+        <button onclick="agregarParticipante()">Agregar</button>
+    </div>
+    <div id="participant-list">
+        <h2>Lista de Participantes:</h2>
+        <ul id="participants">
+        </ul>
+        <button onclick="seleccionarGanador()">Seleccionar Ganador</button>
+    </div>
+    <div id="winner">
+        <h2>Ganador:</h2>
+        <p id="winner-name"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
