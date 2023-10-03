@@ -40,5 +40,13 @@ function seleccionarGanador() {
     eliminatedParticipants.push(ganador);
     
     actualizarListaParticipantes();
-}
+}function iniciar() {
+    var boton=document.getElementById('boton');
+    boton.addEventListener('click', presionar, false);
+ }
+ function presionar() {
+    var audio=document.getElementById('audio');
+    audio.play();
+ }
+ window.addEventListener('load', iniciar, false);
 
