@@ -68,7 +68,7 @@ function seleccionarGanador() {
     let audio = new Audio('musica/cancion_saw.mp3');
     console.log(audio);
     audio.volume = 0.05;
-   //audio.play();
+   audio.play();
  }
 
  window.addEventListener('load', init_audio);
