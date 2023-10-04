@@ -63,12 +63,23 @@ function seleccionarGanador() {
 }
 
     //Musica
-// }function iniciar() {
-//     var boton=document.getElementById('boton');
-//     boton.addEventListener('click', presionar, false);
-//  }
-//  function presionar() {
-//     var audio=document.getElementById('audio');
-//     audio.play();
-//  }
-//  window.addEventListener('load', iniciar, true);
+
+ function init_audio(){
+    let audio = new Audio('musica/cancion_saw.mp3');
+    console.log(audio);
+    audio.volume = 0.05;
+    //audio.play();
+ }
+
+ window.addEventListener('load', init_audio);
+
+ function iniciar() {
+
+    var boton=document.getElementById('boton');
+    boton.addEventListener('click', presionar, false);
+ }
+  function presionar() {
+     var audio=document.getElementById('audio');
+     audio.play();
+ }
+  window.addEventListener('load', iniciar, true);
