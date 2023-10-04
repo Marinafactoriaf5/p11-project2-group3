@@ -2,7 +2,7 @@ body {
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
     background-color: #383535;
-    background-image: url(Group\ 2.png);
+    background-image: url(imagen/Group\ 2.png);
     background-size: cover;
     background-repeat: no-repeat; 
 }
@@ -36,17 +36,17 @@ li{
     list-style: none;
 }
 
-.gif{
-    animation: move 10s linear infinite forwards;
+/* .gif{
+    animation: move 6s linear infinite forwards;
 }
 
 @keyframes move {
     from{
         transform: translateX(-70vw);
     }to{
-        transform: translateX(100vw);
+        transform: translateX(1000px);
     }
-}
+} */
 
 .boton{
 background-color: #BE010E;
@@ -76,11 +76,43 @@ margin-right: 80px;
 margin-left: -60px;
 }
 
+
+
+
 #winner {
-    font-size: 20px;
+    font-size: 80px;
     font-family: Frightmare;
     letter-spacing: 2px;
     text-shadow: 5px 8px 5px black;
     color: #BE010E;
     list-style: none;
 }
+
+
+
+
+li button{
+    cursor: pointer;
+    margin: 5px;
+    height: 20px;
+    width: 20px;
+    background-image: url(imagen/eliminar.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border: none;
+    border-radius: 3px;
+}
+
+li button:hover{
+    color: aliceblue;
+    background-image: url(imagen/eliminar.png);
+    height: 21px;
+    width: 21px;
+    box-shadow: 3px 3px 2px black;
+}
+li button:active{
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+

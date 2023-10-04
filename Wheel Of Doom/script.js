@@ -12,15 +12,36 @@ function agregarParticipante() {
     }
 }
 
+
+
 function actualizarListaParticipantes() {
     const participantsList = document.getElementById('participants');
     participantsList.innerHTML = '';
     participants.forEach((participant) => {
         const listItem = document.createElement('li');
         listItem.textContent = participant;
+             //crear boton de eliminar
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = '';
+        deleteButton.addEventListener('click', function (){
+            
+            //logica para eliminar participantes
+            const index = participants.indexOf(participant);
+            if (index !== -1){
+                participants.splice(index, 1);
+                actualizarListaParticipantes(); //actulaizar la lista
+            }
+        });
+        //añadir  el boton al elemento lista
+        listItem.appendChild(deleteButton);
+
+        //añadir el elemento de l alista al contenedor de la lista
+
         participantsList.appendChild(listItem);
     });
 }
+
+
 
 function seleccionarGanador() {
     const winnerDisplay = document.getElementById('winner');
@@ -39,13 +60,15 @@ function seleccionarGanador() {
     eliminatedParticipants.push(ganador);
     
     actualizarListaParticipantes();
-}function iniciar() {
-    var boton=document.getElementById('boton');
-    boton.addEventListener('click', presionar, false);
- }
- function presionar() {
-    var audio=document.getElementById('audio');
-    audio.play();
- }
- window.addEventListener('load', iniciar, true);
+}
 
+    //Musica
+// }function iniciar() {
+//     var boton=document.getElementById('boton');
+//     boton.addEventListener('click', presionar, false);
+//  }
+//  function presionar() {
+//     var audio=document.getElementById('audio');
+//     audio.play();
+//  }
+//  window.addEventListener('load', iniciar, true);
