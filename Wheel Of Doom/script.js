@@ -1,6 +1,21 @@
 let participants = [];
 let eliminatedParticipants = [];
 
+let nombres = ["Marina", "Mauricio", "Julio", "Andrés", "Daniel",  "Cora", "Seif"];
+let listaNombres = document.querySelector(".listaNombres");
+
+for(let name of nombres) {
+    listaNombres.insertAdjacentHTML("beforeend", `<p>${name}</p>`)
+}
+
+
+
+
+
+
+
+
+
 function agregarParticipante() {
     const participantInput = document.getElementById('participant');
     const participantName = participantInput.value.trim();
@@ -68,7 +83,7 @@ function seleccionarGanador() {
     let audio = new Audio('musica/cancion_saw.mp3');
     console.log(audio);
     audio.volume = 0.05;
-   audio.play();
+   // audio.play();
  }
 
  window.addEventListener('load', init_audio);

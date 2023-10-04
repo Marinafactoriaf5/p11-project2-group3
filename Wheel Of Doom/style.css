@@ -9,13 +9,13 @@ body {
 
 #lamp{
     display: flex;
-    width: 100%;
-    height: 100%;
+    width: 99%;
+    height: 99%;
     position: absolute;
     z-index: -1;
 }
 
-.text{
+.text {
     color: white;
     font-size: 50px;
     font-family: Frightmare;
@@ -35,7 +35,7 @@ section{
     src: url(Frightmare.otf);
 }
 
-li{
+li, .listaNombres{
     font-size: 20px;
     font-family: Frightmare;
     letter-spacing: 2px;
@@ -49,14 +49,14 @@ li{
     bottom: 0;
 }
 #gif{
-    animation: move 6s linear infinite forwards;
+    animation: move 10s linear infinite forwards;
 }
 
 @keyframes move {
     from{
         transform: translateX(-70vw);
     }to{
-        transform: translateX(1000px);
+        transform: translateX(2000px);
     }
 }
 
