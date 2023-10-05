@@ -1,20 +1,19 @@
-let participants = [];
-let eliminatedParticipants = [];
-
 let nombres = ["Marina", "Mauricio", "Julio", "Andrés", "Daniel",  "Cora", "Seif"];
+let participants = nombres.slice();
 let listaNombres = document.querySelector(".listaNombres");
 
-for(let name of nombres) {
-    listaNombres.insertAdjacentHTML("beforeend", `<p>${name}</p>`)
+
+function inicializarListaPredeterminada() {
+    const nombres = document.getElementById('participants');
+    nombres.innerHTML = '';
+    participants.forEach((participant) => {
+        const listItem = document.createElement('li');
+        listItem.textContent = participant;
+        nombres.appendChild(listItem);
+    });
 }
 
-
-
-
-
-
-
-
+window.onload = inicializarListaPredeterminada;
 
 function agregarParticipante() {
     const participantInput = document.getElementById('participant');
@@ -29,14 +28,16 @@ function agregarParticipante() {
 
 
 
+
 function actualizarListaParticipantes() {
     const participantsList = document.getElementById('participants');
     participantsList.innerHTML = '';
     participants.forEach((participant) => {
         const listItem = document.createElement('li');
         listItem.textContent = participant;
-             //crear boton de eliminar
-        const deleteButton = document.createElement('button');
+                
+        //crear boton de eliminar
+       const deleteButton = document.createElement('button');
         deleteButton.textContent = '';
         deleteButton.addEventListener('click', function (){
             
@@ -50,9 +51,8 @@ function actualizarListaParticipantes() {
         //añadir  el boton al elemento lista
         listItem.appendChild(deleteButton);
 
-        //añadir el elemento de l alista al contenedor de la lista
-
-        participantsList.appendChild(listItem);
+        //añadir el elemento de la lista al contenedor de la lista
+        participantsList.appendChild(listItem); 
     });
 }
 
@@ -77,8 +77,9 @@ function seleccionarGanador() {
     actualizarListaParticipantes();
 }
 
-    //Musica
 
+
+    //Musica
  function init_audio(){
     let audio = new Audio('musica/cancion_saw.mp3');
     console.log(audio);
