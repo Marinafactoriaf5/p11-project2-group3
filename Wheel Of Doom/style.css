@@ -142,3 +142,10 @@ li button:active{
 .participants{
     max-height: 100px;
 }
+
+.tele{
+    position: absolute;
+    top: 0;
+    width: 95%;
+    height: 102%;
+}
