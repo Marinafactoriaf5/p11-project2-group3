@@ -47,6 +47,7 @@ li, .listaNombres{
     left: 0;
     bottom: 0;
     margin-bottom: -100px;
+    z-index: 4;
 }
 #gif{
     animation: move 10s linear infinite forwards;
@@ -152,13 +153,20 @@ li button:active{
 
 video{
     position: absolute;
-    top: 133px;
-    right: 449px;
+    top: 123px;
+    right: -230px;
     width: 52%;
-    height: 62%;
+    height: 64%;
 }
 
-.tele, video{
+.teleVideo{
     display:none;
 }
-
+.teleVideo.visible{
+    position: fixed;
+    display: block;
+    width: 95%;
+    height: 100%;
+    top: 0;
+    left: -650px;
+}

@@ -103,3 +103,9 @@ function presionar() {
 
 }
 window.addEventListener('load', iniciar, true);
+
+
+
+document.getElementById("boton").onclick = function (){
+    document.getElementsByClassName("teleVideo")[0].classList.toggle("visible");
+}
