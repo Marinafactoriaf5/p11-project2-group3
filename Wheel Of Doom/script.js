@@ -3,17 +3,17 @@ let participants = nombres.slice();
 let listaNombres = document.querySelector(".listaNombres");
 
 
-function inicializarListaPredeterminada() {
-    const nombres = document.getElementById('participants');
-    nombres.innerHTML = '';
-    participants.forEach((participant) => {
-        const listItem = document.createElement('li');
-        listItem.textContent = participant;
-        nombres.appendChild(listItem);
-    });
-}
+// function inicializarListaPredeterminada() {
+//     const nombres = document.getElementById('participants');
+//     nombres.innerHTML = '';
+//     participants.forEach((participant) => {
+//         const listItem = document.createElement('li');
+//         listItem.textContent = participant;
+//         nombres.appendChild(listItem);
+//     });
+// }
 
-window.onload = inicializarListaPredeterminada;
+// window.onload = inicializarListaPredeterminada;
 
 function agregarParticipante() {
     const participantInput = document.getElementById('participant');
@@ -37,7 +37,7 @@ function actualizarListaParticipantes() {
         listItem.textContent = participant;
                 
         //crear boton de eliminar
-       const deleteButton = document.createElement('button');
+        const deleteButton = document.createElement('button');
         deleteButton.textContent = '';
         deleteButton.addEventListener('click', function (){
             
@@ -80,26 +80,26 @@ function seleccionarGanador() {
 
 
     //Musica
- function init_audio(){
+function init_audio(){
     let audio = new Audio('musica/cancion_saw.mp3');
     console.log(audio);
     audio.volume = 0.05;
    // audio.play();
- }
+}
 
- window.addEventListener('load', init_audio);
+window.addEventListener('load', init_audio);
 
 
 
- function iniciar() {
+function iniciar() {
 
     var boton=document.getElementById('boton');
     boton.addEventListener('click', presionar, false);
- }
-  function presionar() {
-     var audio=document.getElementById('audio');
-     audio.play();
-     audio.volume = 0.5;
+}
+function presionar() {
+    var audio=document.getElementById('audio');
+    audio.play();
+    audio.volume = 0.5;
 
- }
-  window.addEventListener('load', iniciar, true);
+}
+window.addEventListener('load', iniciar, true);

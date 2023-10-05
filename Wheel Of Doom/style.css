@@ -61,6 +61,7 @@ li, .listaNombres{
 }
 
 .boton{
+    cursor: pointer;
     background-color: #BE010E;
     color: white;
     text-shadow: 5px 4px 4px black;
@@ -70,6 +71,18 @@ li, .listaNombres{
     font-size: 17px ;
     letter-spacing: 1.5px;
     border-radius: 7px;
+    border: none;
+}
+
+.boton:hover{
+    width: 110px;
+    height: 35px;
+    box-shadow: 10px 5px 5px black;
+}
+
+.boton:active{
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
 .caja {
@@ -129,4 +142,3 @@ li button:active{
 .participants{
     max-height: 100px;
 }
-
