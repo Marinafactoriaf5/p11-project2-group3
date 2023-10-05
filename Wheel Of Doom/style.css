@@ -147,5 +147,14 @@ li button:active{
     position: absolute;
     top: 0;
     width: 95%;
-    height: 102%;
+    height: 100%;
+    /*display:none;*/
+}
+
+video{
+    position: absolute;
+    top: 133px;
+    right: 449px;
+    width: 52%;
+    height: 62%;
 }
