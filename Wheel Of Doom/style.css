@@ -148,7 +148,6 @@ li button:active{
     top: 0;
     width: 95%;
     height: 100%;
-    /*display:none;*/
 }
 
 video{
@@ -158,3 +157,8 @@ video{
     width: 52%;
     height: 62%;
 }
+
+.tele, video{
+    display:none;
+}
+
