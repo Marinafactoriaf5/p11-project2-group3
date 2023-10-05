@@ -2,7 +2,6 @@ body {
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
     background-color: #383535;
-    /* background-image: url(imagen/Group\ 2.png); */
     background-size: cover;
     background-repeat: no-repeat; 
 }
@@ -47,6 +46,7 @@ li, .listaNombres{
     position: fixed;
     left: 0;
     bottom: 0;
+    margin-bottom: -100px;
 }
 #gif{
     animation: move 10s linear infinite forwards;

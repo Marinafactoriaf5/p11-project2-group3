@@ -3,17 +3,17 @@ let participants = nombres.slice();
 let listaNombres = document.querySelector(".listaNombres");
 
 
-// function inicializarListaPredeterminada() {
-//     const nombres = document.getElementById('participants');
-//     nombres.innerHTML = '';
-//     participants.forEach((participant) => {
-//         const listItem = document.createElement('li');
-//         listItem.textContent = participant;
-//         nombres.appendChild(listItem);
-//     });
-// }
+function inicializarListaPredeterminada() {
+    const nombres = document.getElementById('participants');
+    nombres.innerHTML = '';
+    participants.forEach((participant) => {
+        const listItem = document.createElement('li');
+        listItem.textContent = participant;
+        nombres.appendChild(listItem);
+    });
+}
 
-// window.onload = inicializarListaPredeterminada;
+window.onload = inicializarListaPredeterminada;
 
 function agregarParticipante() {
     const participantInput = document.getElementById('participant');
