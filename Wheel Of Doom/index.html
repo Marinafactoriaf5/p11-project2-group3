@@ -37,7 +37,7 @@
     </article>
     
     </section>
-    <button class="boton" id="boton" onclick="seleccionarGanador()">Jugamos?</button>
+    <button class="boton" id="boton" >Jugamos?</button>
     <div id="winner">
         <h2 class="text"></h2>
         <p id="winner-name"></p>
@@ -49,17 +49,15 @@
 
     <section class="teleVideo">
         <img class="tele" src="imagen/tele.png" alt="tele">
+        <p id="textoGanador">Quieres jugar a un juego?</p>
         <video controls>
             <source src="imagen/video saw.mp4" type="video/mp4">
         </video>
-        <button class="tv-button1">PLAY</button>
+        <button class="tv-button1" onclick="seleccionarGanador()">PLAY</button>
         <button class="tv-button2">RESTART</button>
     </section>
 
     <script src="script.js"></script>
-<footer>
-
-</footer>
 </body>
 </html>
 
