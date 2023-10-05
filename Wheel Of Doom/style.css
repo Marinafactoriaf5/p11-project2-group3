@@ -170,3 +170,24 @@ video{
     top: 0;
     left: -650px;
 }
+.tv-button1,.tv-button2{
+    background: #343d3a ;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    position:fixed;
+    z-index: 3;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: none;
+}
+
+.tv-button1{
+    top: 385px;
+    right: 247px;
+}  
+
+.tv-button2{
+    top: 500px;
+    right: 247px;
+}  
