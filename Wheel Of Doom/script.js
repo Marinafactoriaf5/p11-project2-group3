@@ -1,4 +1,4 @@
-let nombres = ["Marina", "Mauricio", "Julio", "Andrés", "Daniel",  "Cora", "Seif"];
+let nombres = ["Javi", "Gabriela","Marina", "Mauricio", "Julio", "Andrés", "Daniel", "Cora", "Seif", "Alexandr C", "Alexander W", "Chiara", "Isaías", "Luc", "Matheus","Michelly", "Jorge", "Paul", "Karol", "Santi"];
 let participants = nombres.slice();
 let listaNombres = document.querySelector(".listaNombres");
 

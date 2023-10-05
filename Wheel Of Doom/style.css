@@ -34,14 +34,35 @@ section{
     src: url(Frightmare.otf);
 }
 
+ul{
+    overflow: scroll;
+    height: 60vh;
+    scrollbar-width: none;
+
+}
+
+ul::-webkit-scrollbar{
+    display: none;
+  }
+
+  ul {
+    -ms-overflow-style: none;
+  }
+
 li, .listaNombres{
-    font-size: 20px;
+    font-size: 30px;
     font-family: Frightmare;
     letter-spacing: 2px;
     text-shadow: 5px 8px 5px black;
     color: white;
     list-style: none;
 }
+
+
+#participant-list{
+    margin-top: -20px;
+}
+
 .gif{
     position: fixed;
     left: 0;
@@ -115,6 +136,8 @@ li, .listaNombres{
     list-style: none;
     position: fixed;
     z-index: 4;
+    top: 250px;
+    left: 550px;
 }
 
 li button{
@@ -162,6 +185,8 @@ li button:active{
     color: white;
     position: fixed;
     z-index: 4;
+    top: 100px;
+    left: 290px;
 }
 video{
     position: absolute;
