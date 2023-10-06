@@ -73,7 +73,7 @@ function seleccionarGanador() {
 function init_audio(){
     let audio = new Audio('musica/cancion_saw.mp3');
     console.log(audio);
-    audio.volume = 0.05;
+    audio.volume = 0.02;
     audio.play();
 }
 
