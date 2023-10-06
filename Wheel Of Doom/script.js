@@ -112,7 +112,7 @@ document.getElementById("boton").onclick = function (){
 
 function playVideo(){
     let video = document.getElementById("videoSaw");
-    video.volume = 0.5;
+    video.volume = 0.3;
     video.play();
     seleccionarGanador();
 }
