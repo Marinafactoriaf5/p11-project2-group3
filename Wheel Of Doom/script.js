@@ -57,15 +57,17 @@ function actualizarListaParticipantes() {
 function seleccionarGanador() {
     const winnerDisplay = document.getElementById('winner');
     if (participants.length === 0) {
-        winnerDisplay.style.display = 'none';
+        document.getElementById('winner-name').textContent = "Quieres Jugar otra vez?";
         return;
+    }else{
+        const ganadorIndex = Math.floor(Math.random() * participants.length);
+        const ganador = participants[ganadorIndex];
+        document.getElementById('winner-name').textContent = ganador;
+        winnerDisplay.style.display = 'block';
+        participants = participants.filter((participant, index) => index !== ganadorIndex);
+        eliminatedParticipants.push(ganador);
     }
-    const ganadorIndex = Math.floor(Math.random() * participants.length);
-    const ganador = participants[ganadorIndex];
-    document.getElementById('winner-name').textContent = ganador;
-    winnerDisplay.style.display = 'block';
-    participants = participants.filter((participant, index) => index !== ganadorIndex);
-    eliminatedParticipants.push(ganador);
+    
     actualizarListaParticipantes();
 }
 
@@ -102,3 +104,4 @@ function playVideo(){
     video.play();
     seleccionarGanador();
 }
+
