@@ -3,6 +3,14 @@ let participants = nombres.slice();
 let listaNombres = document.querySelector(".listaNombres");
 
 
+window.onload = inicializarListaPredeterminada;
+window.addEventListener('load', init_audio);
+window.addEventListener('load', iniciar, true);
+
+
+
+
+
 function inicializarListaPredeterminada() {
     const nombres = document.getElementById('participants');
     nombres.innerHTML = '';
@@ -13,12 +21,10 @@ function inicializarListaPredeterminada() {
     });
 }
 
-window.onload = inicializarListaPredeterminada;
 
 function agregarParticipante() {
     const participantInput = document.getElementById('participant');
     const participantName = participantInput.value.trim();
-
     if (participantName !== '') {
         participants.push(participantName);
         participantInput.value = '';
@@ -27,35 +33,25 @@ function agregarParticipante() {
 }
 
 
-
-
 function actualizarListaParticipantes() {
     const participantsList = document.getElementById('participants');
     participantsList.innerHTML = '';
     participants.forEach((participant) => {
         const listItem = document.createElement('li');
         listItem.textContent = participant;
-                
-        //crear boton de eliminar
         const deleteButton = document.createElement('button');
         deleteButton.textContent = '';
         deleteButton.addEventListener('click', function (){
-            
-            //logica para eliminar participantes
             const index = participants.indexOf(participant);
             if (index !== -1){
                 participants.splice(index, 1);
-                actualizarListaParticipantes(); //actulaizar la lista
+                actualizarListaParticipantes(); 
             }
         });
-        //añadir  el boton al elemento lista
         listItem.appendChild(deleteButton);
-
-        //añadir el elemento de la lista al contenedor de la lista
         participantsList.appendChild(listItem); 
     });
 }
-
 
 
 function seleccionarGanador() {
@@ -64,46 +60,36 @@ function seleccionarGanador() {
         winnerDisplay.style.display = 'none';
         return;
     }
-
     const ganadorIndex = Math.floor(Math.random() * participants.length);
     const ganador = participants[ganadorIndex];
-
     document.getElementById('winner-name').textContent = ganador;
     winnerDisplay.style.display = 'block';
-
     participants = participants.filter((participant, index) => index !== ganadorIndex);
     eliminatedParticipants.push(ganador);
-    
     actualizarListaParticipantes();
 }
 
 
-
-    //Musica
 function init_audio(){
     let audio = new Audio('musica/cancion_saw.mp3');
     console.log(audio);
     audio.volume = 0.05;
-   // audio.play();
+    audio.play();
 }
-
-window.addEventListener('load', init_audio);
-
 
 
 function iniciar() {
-
-    var boton=document.getElementById('boton');
+    let boton=document.getElementById('boton');
     boton.addEventListener('click', presionar, false);
 }
+
+
 function presionar() {
-    var audio=document.getElementById('audio');
+    let audio=document.getElementById('audio');
     audio.play();
     audio.volume = 0.5;
 
 }
-window.addEventListener('load', iniciar, true);
-
 
 
 document.getElementById("boton").onclick = function (){
@@ -112,7 +98,7 @@ document.getElementById("boton").onclick = function (){
 
 function playVideo(){
     let video = document.getElementById("videoSaw");
-    video.volume = 0.3;
+    video.volume = 0.1;
     video.play();
     seleccionarGanador();
 }

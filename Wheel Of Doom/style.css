@@ -6,21 +6,21 @@
 }
 
 
-#lamp{
-    display: flex;
-    width: 99%;
-    height: 99%;
-    position: absolute;
-    z-index: -1;
-}
-
-
 body {
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
     background-color: #383535;
     background-size: cover;
     background-repeat: no-repeat; 
+}
+
+
+#lamp{
+    display: flex;
+    width: 99%;
+    height: 99%;
+    position: absolute;
+    z-index: -1;
 }
 
 
