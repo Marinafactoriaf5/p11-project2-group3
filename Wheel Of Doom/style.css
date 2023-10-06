@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
 
-body {
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: center;
-    background-color: #383535;
-    background-size: cover;
-    background-repeat: no-repeat; 
+@font-face {
+    font-family: Frightmare;
+    src: url(Frightmare.otf);
 }
+
 
 #lamp{
     display: flex;
@@ -15,6 +13,28 @@ body {
     position: absolute;
     z-index: -1;
 }
+
+
+body {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    background-color: #383535;
+    background-size: cover;
+    background-repeat: no-repeat; 
+}
+
+
+section{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+
+.juego input {
+    margin-left: -60px;
+}
+
 
 .text {
     color: white;
@@ -25,64 +45,29 @@ body {
     margin-top: 100px;
 }
 
-section{
-    display: flex;
-    justify-content: space-around;
 
+#juego {
+    margin-left: -170px;
 }
 
-@font-face {
+
+.caja {
     font-family: Frightmare;
-    src: url(Frightmare.otf);
-}
-
-ul{
-    overflow: scroll;
-    height: 60vh;
-    scrollbar-width: none;
-
-}
-
-ul::-webkit-scrollbar{
-    display: none;
-  }
-
-  ul {
-    -ms-overflow-style: none;
-  }
-
-li, .listaNombres{
-    font-size: 30px;
-    font-family: Frightmare;
-    letter-spacing: 2px;
-    text-shadow: 5px 8px 5px black;
-    color: white;
-    list-style: none;
+    width: 200px ;
+    height: 30px ;
+    font-size: 17px ;
+    letter-spacing: 1.5px;
+    margin-right: 70px;
+    margin-left: 90px;
+    border-radius: 10px;
 }
 
 
-#participant-list{
-    margin-top: -20px;
+#participants{
+    width: 200px;
+    height: 150px;
 }
 
-.gif{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    margin-bottom: -100px;
-    z-index: 4;
-}
-#gif{
-    animation: move 10s linear infinite forwards;
-}
-
-@keyframes move {
-    from{
-        transform: translateX(-70vw);
-    }to{
-        transform: translateX(2000px);
-    }
-}
 
 .boton{
     cursor: pointer;
@@ -98,14 +83,6 @@ li, .listaNombres{
     border: none;
 }
 
-#boton{
-    width: 200px ;
-    height: 60px ;
-    font-size: 30px ;
-    letter-spacing: 1.5px;
-    border-radius: 7px;
-    border: none;
-}
 
 .boton:hover{
     width: 110px;
@@ -118,39 +95,38 @@ li, .listaNombres{
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
-.caja {
-    font-family: Frightmare;
-    width: 200px ;
-    height: 30px ;
-    font-size: 17px ;
-    letter-spacing: 1.5px;
-    margin-right: 70px;
-    margin-left: 90px;
-    border-radius: 10px;
+
+#participant-list{
+    margin-top: -20px;
 }
 
-#juego {
-    margin-left: -170px;
+
+ul{
+    overflow: scroll;
+    height: 60vh;
+    scrollbar-width: none;
 }
 
-.juego input {
-    margin-left: -60px;
+
+ul::-webkit-scrollbar{
+    display: none;
 }
 
-#winner {
-    display: flex;
-    justify-content: center;
-    font-size: 80px;
+
+ul {
+    -ms-overflow-style: none;
+}
+
+
+li, .listaNombres{
+    font-size: 30px;
     font-family: Frightmare;
     letter-spacing: 2px;
     text-shadow: 5px 8px 5px black;
-    color: #BE010E;
+    color: white;
     list-style: none;
-    position: fixed;
-    z-index: 4;
-    top: 250px;
-    left: 490px;
 }
+
 
 li button{
     cursor: pointer;
@@ -177,10 +153,66 @@ li button:active{
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
-#participants{
-    width: 200px;
-    height: 150px;
+
+#boton{
+    width: 200px ;
+    height: 60px ;
+    font-size: 30px ;
+    letter-spacing: 1.5px;
+    border-radius: 7px;
+    border: none;
 }
+
+
+#winner {
+    display: flex;
+    justify-content: center;
+    font-size: 80px;
+    font-family: Frightmare;
+    letter-spacing: 2px;
+    text-shadow: 5px 8px 5px black;
+    color: #BE010E;
+    list-style: none;
+    position: fixed;
+    z-index: 4;
+    top: 250px;
+    left: 490px;
+}
+
+
+.gif{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    margin-bottom: -100px;
+    z-index: 4;
+    animation: move 10s linear infinite forwards;
+}
+
+
+@keyframes move {
+    from{
+        transform: translateX(-70vw);
+    }to{
+        transform: translateX(2000px);
+    }
+}
+
+
+.teleVideo{
+    display:none;
+}
+
+
+.teleVideo.visible{
+    position: fixed;
+    display: block;
+    width: 105%;
+    height: 103%;
+    top: 0;
+    left: -750px;
+}
+
 
 .tele{
     position: absolute;
@@ -188,6 +220,7 @@ li button:active{
     width: 95%;
     height: 100%;
 }
+
 
 video{
     position: absolute;
@@ -197,17 +230,7 @@ video{
     height: 73%;
 }
 
-.teleVideo{
-    display:none;
-}
-.teleVideo.visible{
-    position: fixed;
-    display: block;
-    width: 105%;
-    height: 103%;
-    top: 0;
-    left: -750px;
-}
+
 .tv-button1,.tv-button2{
     cursor: pointer;
     background: #343d3a ;
@@ -223,13 +246,14 @@ video{
     border: none;
 }
 
+
 .tv-button1{
     top: 372px;
     right: 170px;
 }  
 
+
 .tv-button2{
     top: 484px;
     right: 170px;
 }  
-
