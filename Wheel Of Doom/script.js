@@ -109,3 +109,10 @@ window.addEventListener('load', iniciar, true);
 document.getElementById("boton").onclick = function (){
     document.getElementsByClassName("teleVideo")[0].classList.toggle("visible");
 }
+
+function playVideo(){
+    let video = document.getElementById("videoSaw");
+    video.volume = 0.5;
+    video.play();
+    seleccionarGanador();
+}
